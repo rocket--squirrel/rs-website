@@ -127,6 +127,7 @@ input:required:invalid {
   cursor: pointer;
 }
 
+a.button,
 button {
   font-weight: 400;
   cursor: pointer;
@@ -141,13 +142,36 @@ button {
   padding: 10px 20px;
 }
 
+a.button{
+  color: white;
+  background: rgb(225, 147, 112);
+  text-decoration: none;
+}
+
+a.button:hover,
 button:hover small {
   opacity: 0.5;
 }
 
+a.link--small{
+  font-size: 16px;
+  text-decoration: none;
+  color: rgb(225, 147, 112);
+}
+a.link--small:hover{
+  text-decoration: underline;
+}
 small {
   display: block;
   opacity: 0;
+}
+
+section,
+div.section {
+  border-bottom: 2px dashed rgba(76, 82, 90, 0.5);
+  padding: 48px 12px;
+  max-width: 1004px;
+  margin: 0 auto;
 }
 
 .website {
