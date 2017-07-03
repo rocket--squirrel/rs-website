@@ -4,7 +4,7 @@ var CompressionPlugin = require("compression-webpack-plugin");
 
 module.exports = {
   context: path.resolve(__dirname, 'src'),
-  entry: './app.js',
+  entry: ['jquery','./app.js'],
   output: {
     filename: 'script.js',
     path: path.resolve(__dirname, 'public/js')
@@ -71,6 +71,11 @@ module.exports = {
     }),
     new webpack.optimize.MinChunkSizePlugin({
       minChunkSize: 10000 // Minimum number of characters
+    }),
+    new webpack.optimize.CommonsChunkPlugin({
+      name: "common",
+      filename: "commons.js",
+      minChunks: 2
     })
   ]
 }
